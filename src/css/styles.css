@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+header {
+  background: #181719;
+}
+
+nav {
+  margin: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-logo {
+  border: 1px solid white;
+  padding: 5px 10px;
+  height: 32px;
+  background-color: inherit;
+  color: #fff;
+  font-family: "Crimson Pro", serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 16px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  column-gap: 60px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 15px 20px;
+  position: relative;
+}
+
+nav ul li a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+nav ul li a.active:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
+}
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.container {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+}
+.container__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-right: 150px;
+}
+.container__text h1 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+  color: #ffffff;
+}
+.container__text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.container__text span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.container__image {
+  position: relative;
+  max-width: 650px;
+}
+.container__image {
+  position: relative;
+}
+.container__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.container__image--profile {
+  padding: 10px 80px 20px 15px;
+  position: absolute;
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  bottom: 0%;
+  right: 0%;
+  transform: translate(-5%, 62%);
+  border-radius: 10px;
+}
+.container__image--profile img {
+  border-radius: 37px;
+  width: 50px;
+}
+.container__image--profile .tittle {
+  display: flex;
+  column-gap: 10px;
+}
+.container__image--profile .tittle .tittle_name h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.container__image--profile .tittle .tittle_name span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+.container__image--profile p {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  color: #ffffff;
+  width: 200px;
+}
+footer a {
+  color: #828282;
+}
+footer p {
+  margin-top: 80px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #a9a9a9;
+}
+@media only screen and (max-width: 968px) {
+  nav {
+    margin: 15px 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    row-gap: 40px;
+    width: 100%;
+    align-items: center;
+    left: 100%;
+    transition: left 0.3s;
+    background-color: #181719;
+    background-color: hsl(0 0% 0%/0.8);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .nav__menu-visible {
+    left: 0;
+    inset: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .container__text {
+    margin: 0%;
+    margin-bottom: 30px;
+  }
+  .container__text h1 {
+    font-size: 32px;
+  }
+  .container__text p {
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 50px;
+  }
+  .container__text span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .container__image--profile p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 23px;
+    min-width: 150px;
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  .container__image--profile {
+    padding: 10px 50px 20px 15px;
+    transform: translate(-5%, 62%);
+    border-radius: 10px;
+  }
+  footer{
+    padding: 10px 20px;
+  }
+  footer p{
+    margin-top: 100px;
+  }
+}
+
+/* animations */
+/* ----------------------------------------------
+ * Generated by Animista on 2022-12-12 1:19:41
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+.text-focus-in {
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }

@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="shortcut icon" href="./src/img/devchallenges.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
 </head>
+
 <body>
- 
+    <header>
+        <nav>
+            <button class="nav-logo button-logo">This interior</button>
+
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container nav-toggle bar' for="menu-toggle" aria-label="Abrir mení">
+                <div class='menu-button'></div>
+            </label>
+
+
+
+            <ul class="nav-menu">
+                <li><a href="#" class="active text-focus-in">Home</a></li>
+                <li><a href="#" class="text-focus-in">About</a></li>
+                <li><a href="#" class="text-focus-in">Colletion</a></li>
+                <li><a href="#" class="text-focus-in">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="container__text">
+                <h1 class="text-focus-in">Modern interior</h1>
+                <p class="text-focus-in">A full-Service residential & commercial interior design and staging company offering professional
+                    organizing & eco-services.</p>
+                <span class="text-focus-in">Read More <i class='bx bx-right-arrow-alt bx-fade-right bx-md'></i></span>
+          
+                
+            </div>
+            <div class="container__image">
+
+                <img src="./src/img/photo1.png" alt=""  class="text-focus-in">
+
+                <div class="container__image--profile">
+                    <div class="tittle">
+                        <img src="./src/img/photo2.png" alt="profile" class="text-focus-in">
+                        <div class="tittle_name">
+                            <h1 class="text-focus-in">Aliza Webber</h1>
+                            <span class="text-focus-in">Interior Designer</span>
+                        </div>
+                    </div>
+                    <p class="text-focus-in">Developed in 2022 by Brayan Ospina</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>created by <a href="https://github.com/brayanospina2005">Brayan Ospina</a> - devChallenges.io</p>
+    </footer>
+    <script src="./src/js/app.js"></script>
+   
 </body>
+
 </html>
